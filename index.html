@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English to Multilanguage typing</title>
+  <script src="tinymce/tinymce.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="wide_wrapper header_wrap">
+      <div class="logo"><a href="/" title="Home">
+          <!-- <img src="./images/logo.png" alt=""> -->
+          Transliteration</a></div>
+      <div class="menu">
+        <a href="/english-ocr.html">Image to text</a>
+        <a href="/contact-us.html">Contact us</a>
+      </div>
+    </div>
+  </header>
+  <main class="wrapper">
+    <h1><strong>ENGLISH</strong> to <strong><span id="targetLang">Hindi</span></strong> Typing</h1>
+    <form>
+      <div id='translControl'>
+        <h4>Type in</h4><select id="languageDropDown" onchange="javascript:languageChangeHandler()"></select>
+      </div>
+      <textarea id="translator"></textarea>
+      <div id="suggestionMenu"></div>
+      <div class="info">
+        <span>Word Count: <span id="word_count">0</span></span>
+        <span>Character Count (excluding spaces): <span id="charEx_count">0</span></span>
+        <span>Character Count (including spaces): <span id="charIn_count">0</span></span>
+      </div>
+    </form>
+  </main>
+  <section class="wide_wrapper">
+    <h5 class="bold " style="font-size: 17px;"><b>Type in English and Convert to Hindi Online</b></h5>
+    <p><span style="font-size: 18px;">Typing Only info has been created with a special focus on addressing the
+        challenges faced by the population of the Indian subcontinent who write blogs and articles in their regional
+        languages. Whether it's Hindi, Marathi, Gujarati, Bengali, Nepali, Urdu, Tamil, Kannada, or others, we
+        provide
+        support for typing in nearly all Indian languages. Our Online Hindi Typing Tool leverages the power of
+        Google
+        transliteration and translation systems, and we have enhanced it with a clean, secure, and streamlined user
+        interface for our site. Additionally, it is fully compatible with mobile browsers, ensuring a seamless
+        typing
+        experience on the go.</span></p>
+    <p><span style="font-size: 18px;">Our platform facilitates effortless English to Malayalam typing and
+        transliteration, allowing users to seamlessly convert text from English to Hindi and various other Indian
+        languages. This feature is particularly beneficial for individuals who are not familiar with native typing
+        in
+        Hindi or their regional languages. Users can simply input words in English, and upon pressing the "space"
+        key,
+        the text will be automatically transformed into their selected language.</span></p>
+    <p><span style="font-size: 18px;">For instance, when you enter "mera bharat mahaan" in the Hindi Converter box, it
+        will automatically transform into "मेरा भारत महान" upon pressing the "space bar."</span></p>
+
+    <p><span style="font-size: 18px;"><b>When you enter the " | " pipe symbol (using Shift + \ key) in the Hindi
+          Conversion box, it will produce the " । " character (known as पूर्ण विराम).</b></span></p>
+    <p><span style="font-size: 18px;">If you wish to format your text with Bold, Italic, Underline, or incorporate
+        colors, or if you need to adjust the alignment of passages, whether in Hindi or any other Indian languages,
+        our
+        robust online Text Editor, known as "Text Editor," is at your disposal. Simply copy and paste your text into
+        this editor, and customize the formatting to suit your requirements.</span></p>
+    <p><span style="font-size: 18px;">Typing Only offers a "Typing Test" feature on our platform. Our website provides
+        typing tests in various Indian languages, including English, Hindi, Marathi, Bengali, Punjabi, Kannada,
+        Tamil,
+        and Urdu. Whether you're looking to enhance your Hindi typing skills or improve your "words per minute" in
+        the
+        "Remington or Inscript" Hindi Keyboard Layout, our typing test service is available for free. We developed
+        this
+        service with our student community in mind, aiming to facilitate typing learning without the need for any
+        downloads on your PC since it's entirely online. Our Hindi Typing Test comprises interactive and meaningful
+        passages designed to assist you in competitive exams.</span></p>
+    <p><span style="font-size: 17px;"><b>Suggestions for Words and Characters</b></span></p>
+    <p><span style="font-size: 18px;">You have the option to switch between Word Suggestions and Character
+        Suggestions.
+        When using Word Suggestions mode, suggestions appear after you type the entire word and release the space
+        bar.
+        On the other hand, in Character Suggestions mode, suggestions begin as soon as you start typing in
+        Hindi.</span>
+    </p>
+    <p><span style="font-size: 17px;"><b>Save as Text File &amp; Document File</b></span></p>
+    <p><span style="font-size: 18px;">You have the option to download the content you've typed on your computer as
+        either a Notepad text file or a Word document file. Simply click the button located below the Hindi text
+        area.</span></p>
+    <p><span style="font-size: 17px;"><b>Send Via Gmail</b></span></p>
+    <p><span style="font-size: 18px;">Instantly send an email in Hindi.</span></p>
+    <p><span style="font-size: 17px;"><b>Regarding the Hindi Language</b></span></p>
+    <p><span style="font-size: 18px;">India boasts a rich tapestry of languages, with the constitution officially
+        recognizing 22 distinct ones. Among this linguistic diversity, Hindi stands out as the most widely spoken
+        language in the country. The global reach of Hindi is expanding, making it the world's third most spoken
+        language. Not only is Hindi the oldest language globally, but it is also celebrated for its simplicity and
+        prosperity. Written in the Devanagari script, Hindi is easy to learn, attracting individuals from various
+        backgrounds to study it. Since gaining official status in 1950, Hindi has consistently risen in prominence,
+        steadily earning the title of India's "most popular language.</span></p>
+    <p><span style="font-size: 18px;">In honor of the 150th anniversary of Hindi, an annual ceremony takes place on
+        September 11th. This celebration is observed across cities and towns throughout the country, featuring a
+        diverse
+        array of public and private events dedicated to commemorating this milestone. With over a billion Hindi
+        speakers, the language bears the influence of Sanskrit and is written in the Devanagari script. The standard
+        form of Hindi is rooted in the Khari Boli dialect, spoken in the northern and eastern regions of
+        Delhi.</span>
+    </p>
+    <p><span style="font-size: 18px;">Awadhi, Bagheli, Bhojpuri, Bundeli, Chhattisgarhi, Garhwali, Haryanawi, Kanauji,
+        Kumayuni, Magahi, and Marwari are categorized as dialects of Hindi. However, a more accurate classification
+        designates these as regional languages within the "Hindi zone" or "belt," encompassing northern India and
+        extending south into Madhya Pradesh.</span></p>
+    <p><span style="font-size: 18px;">Hindi's vocabulary is primarily derived from Sanskrit, Persian, and Arabic. In
+        the
+        16th century and beyond, Hindi established its distinct script, with the initial usage of the Devanagari
+        script
+        recorded in 1822. While Hindi serves as a secondary language in many regions of India, excluding Gujarat and
+        Maharashtra, a significant segment of the population in Madhya Pradesh, Rajasthan, Chhattisgarh, and Uttar
+        Pradesh not only speaks but also writes in Hindi.</span></p>
+    <p><span style="font-size: 18px;">Hindi stands as India's second language, succeeding English. However, the
+        official
+        acknowledgment and status accorded to Hindi are notably insufficient. Surprisingly, even in states where
+        Hindi
+        is widely spoken, it receives minimal attention in school textbooks. This is in stark contrast to English,
+        which
+        holds the position of the most widely adopted foreign language in India. The general populace primarily
+        encounters Hindi through movies and television, with limited exposure in formal educational settings. While
+        English instruction begins as early as the first grade, Hindi is seldom integrated into school curricula,
+        especially in the higher grades.</span></p>
+    <p><span style="font-size: 17px;"><b>Significance of the Hindi Language</b></span></p>
+    <p><span style="font-size: 18px;">Several writers advocated for Hindi to be established as the official language
+        of
+        India. In the Hindi Sahitya Sammelan of 1919, Mahatma Gandhi urged the declaration of Hindi as the national
+        language. After gaining independence, the question of selecting the official language in 1949 sparked
+        considerable deliberation. Eventually, the Indian Constituent Assembly decided that Hindi would hold the
+        status
+        of the Union's official language.</span></p>
+    <p><span style="font-size: 18px;">However, the announcement of Hindi as the national language sparked discontent
+        among non-Hindi-speaking states, leading to a demand for English to be accorded the same recognition.
+        Consequently, English was also designated as a national language, resulting in both Hindi and English
+        becoming
+        the official languages of India.</span></p>
+
+    <p><span style="font-size: 18px;">Hindi Diwas serves as a yearly reminder of our true identity and aims to unite
+        the
+        people of the country. It is observed annually to underscore the significance of Hindi and encourage its
+        usage
+        across all age groups. Hindi Diwas events take place in schools, colleges, and various institutions. This
+        national holiday is marked by the President honoring individuals who have demonstrated excellence in any
+        field
+        related to the Hindi language. The occasion fosters a sense of respect for Hindi and promotes its use among
+        students. Activities such as debate competitions, poetry contests, storytelling events, speech contests, and
+        other programs are organized in schools and universities. Teachers also deliver speeches in Hindi to
+        emphasize
+        the language's importance.</span></p>
+    <p><span style="font-size: 17px;"><b>We routinely enhance and address bugs on our website to ensure that visitors
+          can maximize their experience. We appreciate your visit to our site. Feel free to reach out to us with
+          any
+          feedback or constructive criticism.</b></span></p>
+  </section>
+  <footer>
+    <div class="wide_wrapper ftr">
+      <div class="left_wrap">
+        <div> <span>English to hindi Typing | All Indian and International languages are supported.</span>
+          <a href="./privacy-policy.html"><span>| Privacy Policy |</span></a>
+        </div>
+        <span> Copyright © 2023 typingonly, All Rights Reserved.</span>
+      </div>
+      <div class="right_wrap">
+        <a href="assets/marathi-fonts-shreelipi/ShreeLipi_fonts.zip">
+        </a><a href="./contact-us.html"><button type="button btn-xs">Contact us</button></a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/tiny.js"></script>
+  <script src="js/googleJSonAPI.js"></script>
+  <script src="js/Transliteration.js"></script>
+</body>
+
+</html>

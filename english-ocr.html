@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English OCR</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body id="ocr">
+    <header>
+        <div class="wide_wrapper header_wrap">
+            <div class="logo"><a href="/" title="Home">
+                    <!-- <img src="./images/logo.png" alt=""> -->
+                    Transliteration</a></div>
+            <div class="menu">
+                <a href="/contact-us.html">Contact us</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper ocr_wrapper">
+            <h1>
+                Image to text converter
+            </h1>
+            <p>
+                Convert a new image by uploading a new one containing readable English text.
+            </p>
+
+            <div class="form_wrapper">
+                <img src="https://tesseract.projectnaptha.com/img/eng_bw.png" alt="" class="image" width="250" />
+
+                <form class="form">
+                    <input type="file" name="image" accept="image/*" />
+                    <input type="submit" value="Upload Image" />
+                </form>
+            </div>
+
+            <div class="convert_btn">
+                <button type="button" class="convert">
+                    Convert image to text
+                </button>
+                <span class="progress"></span>
+
+                <button type="button" class="btn-read hidden">Read Text</button>
+                <button type="button" class="btn-stopRead hidden">Cancel Reading</button>
+            </div>
+
+            <div class="content">
+                <p class="text"></p>
+            </div>
+        </div>
+    </main>
+
+    <section class="wide_wrapper">
+        <h5 style="font-size: 18px;"><b>What is English OCR (Image to Text Converter) ?</b></h5>
+        <p>This section of our website belongs to users who use online OCR (Optical Character Reader). Here you can
+            upload Image file containing English Characters by pressing "Choose file" Button then press the "Convert
+            to Text" button. Our software will process depending on the characters in the uploaded image file and
+            you can get the text in output box. from where you can copy or print it.</p>
+        <p></p>
+        <!-- <ul>
+            <li><strong><span style="font-size: 18px;">jpg image to text</span></strong></li>
+            <li><strong><span style="font-size: 18px;">png image to text</span></strong></li>
+            <li><strong><span style="font-size: 18px;">gif image to text</span></strong></li>
+            <li><strong><span style="font-size: 16px;">bmp image to text</span></strong></li>
+            <li><strong><span style="font-size: 16px;">tiff image to text</span></strong></li>
+            <li><span style="font-size: 18px;"><strong>jpeg image to text</strong></span></li>
+        </ul> -->
+        <p><span style="font-size: 18px;">We support almost all kind of image conversion into text. This is very
+                beneficial for the people who wanted to extract text from the scanned copies of books or
+                pages.
+            </span></p>
+    </section>
+    <footer>
+        <div class="wide_wrapper ftr">
+            <div class="left_wrap">
+                <div> <span>English to hindi Typing | All Indian and International languages are supported.</span>
+                    <a href="./privacy-policy.html"><span>| Privacy Policy |</span></a>
+                </div>
+                <span> Copyright © 2023 typingonly, All Rights Reserved.</span>
+            </div>
+            <div class="right_wrap">
+                <a href="assets/marathi-fonts-shreelipi/ShreeLipi_fonts.zip">
+                </a><a href="./contact-us.html"><button type="button btn-xs">Contact us</button></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+<script src="./js/ocr.js"></script>
+
+</html>
