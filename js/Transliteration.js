@@ -1,5 +1,5 @@
 // Load the Google Transliterate API
-google.load("elements", "1", { packages: "transliteration" });
+google.load("elements", "1", { packages: "transliteration", "nocss": true });
 
 var transliterationControl;
 
@@ -12,14 +12,13 @@ function onLoad() {
   };
 
   transliterationControl = new google.elements.transliteration.TransliterationControl(options);
-
-  transliterationControl.makeTransliteratable(['translator_ifr'], {
-    indicSuggestionMenu: 'on'
-  });
+  transliterationControl.makeTransliteratable(['translator_ifr']);
+  // transliterationControl.c.qc.t13n.c[3].c.d.keyup[0].ia.F.p = 'https://www.google.com';
 
   // Populate the language dropdown
   var destinationLanguage = transliterationControl.getLanguagePair().destinationLanguage;
   var languageSelect = document.getElementById('languageDropDown');
+
   var supportedDestinationLanguages = google.elements.transliteration.getDestinationLanguages(google.elements.transliteration.LanguageCode.ENGLISH);
   for (var lang in supportedDestinationLanguages) {
     var opt = document.createElement('option');
@@ -38,8 +37,9 @@ function onLoad() {
 
 // Handler for dropdown option change event. Calls setLanguagePair to set the new language
 function languageChangeHandler() {
-  var dropdown = document.getElementById('languageDropDown');
+  const dropdown = document.getElementById('languageDropDown');
   transliterationControl.setLanguagePair(google.elements.transliteration.LanguageCode.ENGLISH, dropdown.options[dropdown.selectedIndex].value);
+  localStorage.setItem('languageSelected', dropdown.options[dropdown.selectedIndex].value);
 }
 
 google.setOnLoadCallback(onLoad);

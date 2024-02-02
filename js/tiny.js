@@ -22,12 +22,27 @@ tinymce.init({
       document.getElementById('charEx_count').textContent = char_count;
       document.getElementById('charIn_count').textContent = char_count_space;
     });
-  }
+  },
+  menu: {
+    file: {
+      title: 'Print',
+      items: 'print'
+    },
+    edit: {
+      title: 'Edit',
+      items: 'cut copy paste pastetext | selectall'
+    },
+    view: {
+      title: 'View',
+      items: 'visualaid'
+    },
+  },
+  toolbar: "fontSize|fontsizeselect insertfile undo redo | Paragraph |styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
 });
 
 // ---------------------------------------------------------------------------
 // change h1 text on target language select
-document.getElementById('languageDropDown').addEventListener('change',(e)=>{
+document.getElementById('languageDropDown').addEventListener('change', (e) => {
   const selectedOption = e.target.selectedOptions[0].textContent;
   console.log("Selected language:", selectedOption);
   document.getElementById('targetLang').innerHTML = selectedOption;
